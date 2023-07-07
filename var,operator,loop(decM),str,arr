@@ -1,0 +1,87 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.18; #variable
+contract Variables 
+{ 
+ string public d1="Vinayak"; 
+ function foo() public pure returns(int){ 
+ int a=10; 
+return a; 
+ } 
+ uint public timestamp = block.timestamp; 
+}
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.18;  #operator
+contract Assignment { 
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.18;
+contract Assignment { 
+	uint16 public a = 20;
+	uint16 public b = 10;
+	uint public sum = a + b;
+	uint public diff = a - b;
+	uint public mul = a * b;
+	uint public div = a / b;
+	uint public mod = a % b;
+	uint public dec = --b;
+	uint public inc = ++a;	
+}
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.18;  #loops,decision making
+contract DecisionMakingStmnts 
+{ 
+int i=9; 
+int x=10; 
+ function ifstmt() public view returns(bool) 
+ { 
+if(i<10) 
+return true; 
+ } 
+ function ifelse() public view returns(bool) 
+ { 
+if(i>10) 
+return true; 
+else 
+return false; 
+ } 
+ function ifelseif() public view returns(int) 
+ { 
+if (x < 10) 
+return 0; 
+else if (x < 20) 
+return 1; 
+else 
+return 2; 
+ } 
+}
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.18;  #string
+contract Strings 
+{ 
+string str1 = "VIGNESH"; 
+string str2 = "NADAR";
+function getstr1() public view returns(string memory) 
+ { 
+ return str1; 
+ } 
+function getstr2() public view returns(string memory) 
+ { 
+ return str2; 
+ } 
+}
+
+contract Arrays {   #array
+uint[] public myArray=[1,2,3,4,5]; 
+uint public count=0; 
+function manipulateArray() public returns (uint) 
+ { 
+ myArray.push(6); 
+for (uint j=0; j< myArray.length; j++) 
+ { 
+ count=count + myArray[j]; 
+ } 
+ return count; 
+ } 
+}
